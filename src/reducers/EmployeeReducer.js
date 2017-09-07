@@ -6,8 +6,8 @@ const INITIAL_STATE = {};
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case EMPLOYEES_FETCH_SUCCESS:
-            console.log(action);
-            return state;
+            //return {...state, [id]: action.payload }; si quisieramos que regresara un solo término por el ID
+            return action.payload;
             break;
         default:
             return state;
